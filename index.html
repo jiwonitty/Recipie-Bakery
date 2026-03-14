@@ -39,11 +39,11 @@
       c.height = window.innerHeight;
       ctx.drawImage(res.image, 0, 0, c.width, c.height);
       ctx.fillStyle = 'rgba(10, 6, 2, 0.85)';
-      ctx.fillRect(0, 0, c.width, c.height);
+     // ctx.fillRect(0, 0, c.width, c.height); //
 
-      ctx.shadowColor = '#F5D061';
+      ctx.shadowColor = '#FF0000';
       ctx.shadowBlur = 15;
-      ctx.strokeStyle = '#F5D061';
+      ctx.strokeStyle = '#FF0000';
       ctx.lineWidth = 6;
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
@@ -59,8 +59,8 @@
 
       if (res.multiHandLandmarks && res.multiHandLandmarks.length > 0) {
         var lm = res.multiHandLandmarks[0];
-        drawConnectors(ctx, lm, HAND_CONNECTIONS, {color: 'rgba(245, 208, 97, 0.3)', lineWidth: 2});
-        drawLandmarks(ctx, lm, {color: '#FFFFFF', lineWidth: 1, radius: 2});
+        drawConnectors(ctx, lm, HAND_CONNECTIONS, {color: 'rgba(255, 105, 180, 0.4)', lineWidth: 2});
+        drawLandmarks(ctx, lm, {color: '#FF69B4', lineWidth: 1, radius: 2});
 
         var ind = lm[8];
         var rx = ind.x * c.width;
@@ -79,7 +79,7 @@
         if (shift) { 
           ctx.fillStyle = '#FFFFFF'; 
         } else { 
-          ctx.fillStyle = 'rgba(245, 208, 97, 0.4)'; 
+         // ctx.fillStyle = 'rgba(245, 208, 97, 0.4)'; //
         }
         ctx.fill();
 
